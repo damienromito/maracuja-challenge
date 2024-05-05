@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "production": "maracuja-english-challenge",
+    "development": "english-challenge-test"
+  },
+  "targets": {
+    "maracuja-english-challenge": {
+      "hosting": {
+        "app": [
+          "maracuja"
+        ]
+      }
+    },
+    "english-challenge-test": {
+      "hosting": {
+        "test-app": [
+          "test-maracuja"
+        ]
+      }
+    }
+  }
+}

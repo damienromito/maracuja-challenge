@@ -1,0 +1,14 @@
+{
+  "defaultProject": "app",
+  "projects": {
+    "app" : {
+      "name": "Maracuja Challenge",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "react",
+      "id": "f4207600",
+      "root": "packages/app"
+    }
+  }
+}

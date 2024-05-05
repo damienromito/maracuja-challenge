@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "production": "maracuja-english-challenge",
+    "development": "english-challenge-test"
+  },
+  "targets": {
+    "maracuja-english-challenge": {
+      "hosting": {
+        "dashboard": [
+          "dashboard-maracuja"
+        ]
+      }
+    },
+    "english-challenge-test": {
+      "hosting": {
+        "test-dashboard": [
+          "test-dashboard-maracuja"
+        ]
+      }
+    }
+  }
+}

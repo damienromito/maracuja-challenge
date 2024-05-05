@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": "./packages/app"
+    },
+    {
+      "path": "./packages/shared"
+    }
+  ],
+  "settings": {
+    "javascript.validate.enable": false,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.semi": false,
+    "workbench.fontAliasing": "default",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#c36807",
+      "titleBar.activeForeground": "#15202b"
+    },
+    "java.configuration.updateBuildConfiguration": "automatic"
+  }
+}

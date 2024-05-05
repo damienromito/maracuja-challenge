@@ -1,0 +1,61 @@
+{
+  "challengeId":"4xsecurite-aquitelgroupea",
+  "correctCount":0,
+  "questionSet":{
+      "name":"Help",
+      "id":"test-contest",
+      "startDate" : "2021-04-01T14:16:19.959Z",
+      "endDate" : "2021-04-12T14:16:19.959Z",
+      "type" : "contest"
+  },
+  "phase":{
+      "rankingFilters":[],
+      "name":"Finale",
+      "id":"trainings_L",
+      "contestCount" : 2
+  },
+  "player":{
+      "username":"Damien",
+      "id":"jpYEG7kFCzZQ6XsooOQKydIdYW03",
+      "roles":[]
+  },
+  "answerCount" : 3,
+  "questionCount" : 3,
+  "endOfTime":false,
+  "hasQuit" : false,
+  "deviceId": "testA",
+  "duration":3582,
+  "completedAt" : "2021-04-02T14:16:19.959Z",
+  "team":{
+      "name":"Maracuja Team",
+      "id":"maracujateam_33100_autre"
+  },
+  "topPlayers" : {"members" : 1, "referees" : 1 },
+  "answers":[
+      {
+         "id":"I-A02",
+         "text":"Ville de Saint Louis",
+         "isCorrect":true,
+         "answer":"",
+         "solutions":null,
+         "duration":799
+      },
+      {
+         "id":"IC-A01",
+         "text":"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?",
+         "isCorrect":null,
+         "answer":"Paris",
+         "solutions":"Saint-Louis",
+         "duration":1523
+      },
+      {
+         "id":"IC-A02",
+         "text":"La ville de Saint-Louis fut fondée par des colons ...",
+         "isCorrect":true,
+         "answer":"français",
+         "solutions":"français",
+         "duration":1260
+      }
+   ]
+
+}

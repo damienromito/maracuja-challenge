@@ -1,0 +1,95 @@
+{
+  "name": "@maracuja/dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "yarn start:local",
+    "start:dev": "REACT_APP_ENV=development HOST=0.0.0.0 PORT=3500 react-app-rewired start",
+    "start:prod": "REACT_APP_ENV=production HOST=0.0.0.0 PORT=3000 react-app-rewired start",
+    "start:local": "REACT_APP_FIRESTORE_EMULATOR=true REACT_APP_ENV=development HOST=0.0.0.0 PORT=3500 react-app-rewired start",
+    "start-local:dev": "REACT_APP_FUNCTIONS_EMULATOR=true REACT_APP_ENV=development HOST=0.0.0.0 PORT=3500 react-app-rewired start",
+    "start-local:prod": "REACT_APP_FUNCTIONS_EMULATOR=true REACT_APP_ENV=production HOST=0.0.0.0 PORT=3000 react-app-rewired start",
+    "start-local": "yarn start-local:dev",
+    "build": "yarn build:prod",
+    "build:dev": "REACT_APP_ENV=development react-app-rewired build",
+    "build:prod": "REACT_APP_ENV=production GENERATE_SOURCEMAP=false react-app-rewired build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy-dashboard": "yarn deploy:production",
+    "deploy:production": "firebase use production && yarn build:prod && firebase deploy --only hosting:dashboard",
+    "deploy:testing": "firebase use development && yarn build:dev && firebase deploy --only hosting:test-dashboard",
+    "serve": "firebase serve --only hosting:dashboard",
+    "lint": "standard src --fix"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/runtime": "^7.9.2",
+    "@ionic/react": "^5.5.0",
+    "@tinymce/tinymce-react": "^3.13.1",
+    "airtable": "^0.8.1",
+    "algoliasearch": "^3.35.1",
+    "antd": "^5.4.6",
+    "array-move": "^2.1.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "core-js-compat": "3.4.7",
+    "csv-parser": "^2.3.2",
+    "date-fns": "^2.21.1",
+    "firebase": "8.3.1",
+    "firebase-tools": "^9.1.0",
+    "formik": "^2.2.9",
+    "google-spreadsheet": "^3.3.0",
+    "html-react-parser": "^0.14.0",
+    "materialize-css": "^1.0.0",
+    "moment": "^2.24.0",
+    "nanoid": "^3.1.22",
+    "react": "17.0.2",
+    "react-cropper": "^2.1.8",
+    "react-datasheet-grid": "^4.1.1",
+    "react-datepicker": "^4.3.0",
+    "react-dom": "17.0.2",
+    "react-instantsearch-dom": "^6.0.0",
+    "react-markdown": "^4.3.1",
+    "react-materialize": "^3.4.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "4.0.3",
+    "react-select": "^5.2.2",
+    "react-sortable-hoc": "^1.10.1",
+    "react-youtube": "^7.13.0",
+    "recompose": "^0.30.0",
+    "showdown": "^2.0.0",
+    "styled-components": "^5.3.3",
+    "webpack": "^4.44.2",
+    "yup": "^0.32.11"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@types/styled-components": "^5.1.26",
+    "@types/tinymce": "^4.6.5",
+    "cross-env": "^7.0.3",
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "2.1.8",
+    "react-error-overlay": "6.0.9",
+    "typescript": "^4.7.4"
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

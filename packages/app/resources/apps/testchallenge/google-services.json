@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "474647949720",
+    "firebase_url": "https://english-challenge-test.firebaseio.com",
+    "project_id": "english-challenge-test",
+    "storage_bucket": "english-challenge-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474647949720:android:962cd4faeef87c6cdefbed",
+        "android_client_info": {
+          "package_name": "ac.maracuja.challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474647949720-eup8qrr4micnrd5c58lrkds4o8rc16uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLoLNFplvZqODHL9-VsxOKBYp6h0u1HHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474647949720-a60dvs8n8c049nlqn5a7ovin4h82hg1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "474647949720-143al9knc6bfle9t8eg8djfdtffu0upa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ac.maracuja.challenge",
+                "app_store_id": "1503879184"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474647949720:android:64397c527e227e01defbed",
+        "android_client_info": {
+          "package_name": "ac.maracuja.testchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474647949720-eup8qrr4micnrd5c58lrkds4o8rc16uu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLoLNFplvZqODHL9-VsxOKBYp6h0u1HHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474647949720-a60dvs8n8c049nlqn5a7ovin4h82hg1j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "474647949720-143al9knc6bfle9t8eg8djfdtffu0upa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ac.maracuja.challenge",
+                "app_store_id": "1503879184"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

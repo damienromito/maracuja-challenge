@@ -1,0 +1,165 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  
+     ////////FUNCTIONS////////
+    function isSignedIn() {
+    	return request.auth.uid != null
+    }
+
+    function isCurrentUser(userId) {
+    	return request.auth.uid == userId
+    }
+
+    function isCurrentUserOrAdmin(userId) {
+    	return isAdmin() || isCurrentUser(userId)
+    }
+    
+    function isSuperAdmin() {
+        return "SUPER_ADMIN" in request.auth.token.roles
+    }
+    
+    function isAdmin() {
+      return request.auth.token.roles.hasAny(["ADMIN","SUPER_ADMIN"])
+    }
+    
+  	function isOrgaAdmin(organisationId) {
+    	let user = getUserData(); 
+      let orgaRoles = user.organisations[organisationId].roles;
+      let isAdmin = isAdmin() && orgaRoles != null;
+    	return isAdmin || isSuperAdmin() 
+    }
+    
+    function getUserData() {
+    	return get(/databases/$(database)/documents/users/$(request.auth.uid)).data
+    }
+    
+      //New
+    // function hasOrganisationRole(organisationId, role) {
+    //   return request.auth != null && get(/databases/$(database)/documents/organisations/$(organisation)/permissions/${request.auth.uid}).data.role == role;
+    // }
+
+    // function getPlayerData(challengeId) {
+    // 	return get(/databases/$(database)/documents/challenges/$(challengeId)/players/$(request.auth.uid)).data
+    // }
+    
+    /////////RULES///////
+    match /users/{userId} {
+      allow read, write: if isCurrentUserOrAdmin(userId)
+    } 
+
+		match /organisations/{organisationId} {
+      allow read;
+      allow create, delete: if isSuperAdmin()
+      allow update: if isOrgaAdmin(organisationId)
+
+      match /settings/{settingId} {
+        allow read, write: if isOrgaAdmin(organisationId)
+      } 
+      match /themes/{themesId} {
+        allow read, write: if isOrgaAdmin(organisationId)
+      } 
+      match /modules/{themesId} {
+        allow read, write: if isOrgaAdmin(organisationId)
+      } 
+    } 
+    
+    match /clubProperties/{propertyId} {
+      allow read, write: if isSuperAdmin()
+    } 
+   
+    match /challenges/{challengeId} {
+    	allow read;
+      allow write: if isSuperAdmin()
+
+      match /events/{eventsId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      }
+
+      match /externalActivities/{activityId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      } 
+
+      match /games/{gameId} {
+        allow read: if isAdmin()
+        allow delete: if isSuperAdmin()
+      } 
+
+      match /icebreakers/{icebreakerId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      }
+
+      match /ideas/{ideasId} {
+        allow read, create: if isSignedIn()
+        allow delete: if isAdmin()
+      }
+      
+      match /ideasBoxes/{ideasBoxId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      }
+      
+      match /lotteries/{lotteryId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      } 
+      
+      match /notifications/{notificationId} {
+    	  allow read, write: if isSuperAdmin()
+      } 
+    
+      match /rankings/{rankingId} {
+        allow read;
+      } 
+
+      match /teams/{teamId} {
+        allow read;
+        allow write: if isSignedIn()
+      }       
+
+      match /phases/{phaseId} {
+        allow read, write: if isAdmin()
+      } 
+
+      match /players/{playerId} {
+        allow read, update, delete: if isCurrentUserOrAdmin(playerId)
+        allow create: if isSignedIn()
+      } 
+      
+      match /questionSets/{questionSetId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      } 
+
+      match /settings/{settingId} {
+        allow read, write: if isAdmin()
+      } 
+      
+      match /surveys/{activityId} {
+        allow read: if isSignedIn()
+        allow write: if isAdmin()
+      } 
+
+      match /whitelistMembers/{memberId} {
+        allow read, write: if isAdmin()
+      } 
+    }  
+    
+
+    match /stats/{documents=**} {
+      allow read;
+      allow update, delete, create: if isSuperAdmin()
+    } 
+    
+    match /clubs/{clubId} {
+    	allow read, write: if isSignedIn()
+    } 
+
+
+    
+    
+  }
+}

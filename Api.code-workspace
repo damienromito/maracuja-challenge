@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "packages/api"
+		}
+	],
+	"settings": {
+    "javascript.validate.enable": false,
+		"standard.autoFixOnSave": true,
+		"js/ts.implicitProjectConfig.checkJs": true,
+		"editor.formatOnSave": true,
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"prettier.semi": false,
+		"prettier.printWidth": 1000,
+		"html.format.wrapLineLength": 0,
+
+	}
+}

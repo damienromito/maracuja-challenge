@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "midnightsyntax.vscode-wrap-console-log",
+        "esbenp.prettier-vscode",
+        "styled-components.vscode-styled-components"
+    ]
+}

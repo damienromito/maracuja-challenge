@@ -1,0 +1,2876 @@
+{
+	"info": {
+		"_postman_id": "41de3934-c88d-404b-bb9a-5e20c87a0a4d",
+		"name": "MaracujaChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7759297"
+	},
+	"item": [
+		{
+			"name": "activities",
+			"item": [
+				{
+					"name": "LotteriesSubscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n     \"challengeId\": \"testffe\",\r\n      \"lottery\" : {\r\n          \"id\" : \"i3RfUCM9\",\r\n          \"phaseId\" : \"inscriptions\"\r\n      },\r\n      \"player\" : {\r\n          \"id\" : \"lea_SK9rBgHifVsMKR1ZY9\",\r\n          \"username\" : \"lea\",\r\n          \"firstName\" : \"Lea\",\r\n          \"lastName\" : \"Romito\"\r\n      },\r\n      \"team\" : {\r\n          \"id\" : \"ffe3070015\" ,\r\n          \"name\": \"Maracuja\"\r\n      }\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiLotteriesSubscribe",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiLotteriesSubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActivitiesIdeasCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"edfinnov\",\r\n        \"phaseId\":\"inscriptions\",\r\n        \"questionSetId\" : \"echauffement_1\",\r\n        \"coachIds\": [],\r\n        \"player\" : {\r\n            \"id\" : \"FoQQJAqm81fW2ONUsSB98ZSn71b2\",\r\n            \"username\" : \"Marlène\"\r\n        },\r\n        \"team\" : {\r\n            \"id\" : \"dynaminnov_nc_edf\",\r\n            \"name\" : \"Dynam'Innov\"\r\n        },\r\n        \"idea\" : \"Proposer des offres de rachat de terrain/parcelle préférentielles aux salariés EDF et filiales. L’objectif étant de répondre aux enjeux du plan solaire en trouvant des terrains d’installation. Cela permettrait également de donner de la visibilité au plan solaire aux salariés\"\r\n      }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiActivitiesIdeasCreate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiActivitiesIdeasCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActivitiesWorkshopSubscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"edfinnov\",\r\n        \"player\" : {\r\n            \"id\" : \"VIjPo4W0aobevuzUdcJmqMKYQyk2\",\r\n            \"username\" : \"Claude\"\r\n        },\r\n        \"team\" : {\r\n            \"id\" : \"leslectronovantes_nc_edf\",\r\n            \"name\" : \"Les électronovant.es\"\r\n        },\r\n        \"workshopDate\" : false\r\n      }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiActivitiesWorkshopSubscribe",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiActivitiesWorkshopSubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActivitiesWrite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"sopna\",\r\n        \"phaseId\":\"inscriptions\",\r\n        \"startDate\" : \"2020-03-30T14:16:19.959Z\",\r\n        \"endDate\": \"2021-04-12T14:16:19.959Z\",\r\n        \"type\" : \"idea\",\r\n        \"description\": \"Propose une problématique, une idée ET/OU participe à un atelier d’idéation.\",\r\n        \"name\": \"Mon innovation\"\r\n      }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiActivitiesWrite",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiActivitiesWrite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActivitiesParticipate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"sopna\",\r\n        \"text\" : \"On est al pour tout peter\",\r\n        \"activity\": {\r\n            \"id\" : \"idea-moninno-1617207743317-inscriptions\",\r\n            \"phaseId\":\"inscriptions\",\r\n            \"startDate\" : \"2021-03-03T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-07T14:16:19.959Z\",\r\n            \"name\": \"Mon innovation\",\r\n            \"type\" : \"idea\",\r\n            \"date\" : \"2020-03-03T14:16:19.959Z\"\r\n        },\r\n        \"player\" : {\r\n            \"id\" : \"DJoziuvK74gOTv4KTfGHJkODeXy2\",\r\n            \"username\" : \"Daminou\",\r\n            \"firstName\" : \"Damien\",\r\n            \"lastName\" : \"Romito\"\r\n        },\r\n        \"team\" : {\r\n            \"id\" : \"modelarvertclub17_17000_aeromodelisme\",\r\n            \"name\" : \"Model Arvet Aviron\"\r\n        }\r\n        \r\n      }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiActivitiesParticipate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiActivitiesParticipate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "adminBackup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminBackup",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminBackup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GenerateImagePlayerCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n    \"challengeId\": \"4xsaquitel_sst2303\",\r\n    \"playerId\": \"helene_CkQk3E6dLDEK1N1qo1\",\r\n    \"teamId\": \"equipe1_sst2303\"\r\n  }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGenerateImagePlayerCard",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGenerateImagePlayerCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adminAddSuperAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"userId\" : \"cris_HFCUid7kuCRLDyDPma\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminAddSuperAdmin",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminAddSuperAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendEmail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\" : \"efap_h_efapwelcome\",\r\n        \"mailejtTemplateId\": 4163038,\r\n        \"campaignId\": \"[EFAPWELCOME] Message de ton coach Clarisse\",\r\n        \"title\": \"EFAP Welcome Challenge : message de ton coach Clarisse\",\r\n        \"test\" : false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminSendEmail",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminSendEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCoachsToIcebreaker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\" : \"aquitel_welcome2608\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminAddCoachsToIcebreaker",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminAddCoachsToIcebreaker"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExportCollectionToCV in challenge",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"collection\":\"users\",\r\n        \"challengeId\": \"jib2020\",        \r\n        \"fields\": [\r\n            \"id\",\r\n            \"firstName\",\r\n            \"club.id\",\r\n            \"club.name\",\r\n            \"birthday\",\r\n            \"roles\",\r\n            \"email\",\r\n            \"phoneNumber\",\r\n            \"optinClientPartners\",\r\n            \"optinClient\"\r\n        ]\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminExportToCsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExportCollectionToCV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"collection\":\"users\",\r\n        \"fields\": [\r\n            \"id\",\r\n            \"username\",\r\n            \"clubId\",\r\n            \"licenseNumber\",\r\n            \"avatar.original\",\r\n            \"challengeIds\"\r\n        ]\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminExportToCsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adminAnalyseFlow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\":\"lrrna2-oct2021\",\r\n        \"exportCSV\" :true\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminAnalyseContestFlow",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminAnalyseContestFlow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExportCollectionToCV Games",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"collection\":\"users\",\r\n        \"challengeId\": \"ridetotokyo\",        \r\n        \"fields\": [\r\n            \"id\",\r\n            \"firstName\",\r\n            \"club.id\",\r\n            \"club.name\",\r\n            \"birthday\",\r\n            \"roles\",\r\n            \"email\",\r\n            \"phoneNumber\",\r\n            \"optinClientPartners\",\r\n            \"optinClient\"\r\n        ]\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminExportToCsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adminChallengeReport",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\" : \"efap_h_efapwelcome\",\r\n        \"questionSetId\": null,\r\n        \"calc\" : {\r\n            \"engagmentRate\" : true\r\n        },\r\n        \"pages\" : {\r\n            \"players\" : true,\r\n            \"teams\" : true,\r\n            \"games\" : true,\r\n            \"notifications\" : true,\r\n            \"answers\" : true,\r\n            \"rankings\" :  true\r\n        }\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/adminChallengeReport",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"adminChallengeReport"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "challenges",
+			"item": [
+				{
+					"name": "ImportWhitelist",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"challengeId\": \"edf_innovation_2021\",\n        \"gSheetId\" : \"1ONgJ2giOXKYAB6aBXfSszPGnPfgEqIsE1VkrUCZZ_cA\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesImportWhitelist",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesImportWhitelist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendDailyReport",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"challengeId\": \"crditagricoleformation_f_international\",\n        \"contestId\": \"contestepreuve2_m\",\n        \"phaseId\": \"coperfchallenge_Z\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesSendDailyReport",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesSendDailyReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendAdminReport",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"challengeId\": \"efap_h_efap1a\",\n        \"testEmail\": \"damien@maracuja.ac\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesSendAdminReport",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesSendAdminReport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "calcEngagment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n \n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesCalcEngagment",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesCalcEngagment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTE1ODA5NDAtYzZENk83aHlCWHdoLVY3MGl1UmdaaDBtN2xvLXNzb19mZmVfcHJvZHwxNjI4MDkyMDc0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"name\" : \"OSEF\",\n        \"organisationId\": \"4xsecurite\",\n        \"code\":\"NEWCODE\",\n        \"clubsGenerator\" : {\n            \"count\" : 0,\n            \"unnamed\" : false\n        },\n        \"challengeIdToClone\": \"4xsecurite-aquitelgroupea\",\n        \"subCollectionsToClone\" : {\n            \"phases\" : false, \n            \"questionSets\" : true,\n            \"lotteries\" : false,\n            \"surveys\" : false,\n            \"externalActivities\" : false\n        }\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesCreate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTE1ODA5NDAtYzZENk83aHlCWHdoLVY3MGl1UmdaaDBtN2xvLXNzb19mZmVfcHJvZHwxNjI4MDkyMDc0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"collectionId\" : \"challenges\" ,\n        \"documentId\" : \"4xsecurite_nocode\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesDelete",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCalendar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTE1ODA5NDAtYzZENk83aHlCWHdoLVY3MGl1UmdaaDBtN2xvLXNzb19mZmVfcHJvZHwxNjI4MDkyMDc0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"startDate\" : \"2022-08-19T12:00:25.000Z\" ,\n        \"startQuizDate\" : \"2022-08-25T12:00:25.000Z\" ,\n        \"challengeId\" : \"aquitel_welcome2608\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesUpdateCalendar",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesUpdateCalendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTE1ODA5NDAtYzZENk83aHlCWHdoLVY3MGl1UmdaaDBtN2xvLXNzb19mZmVfcHJvZHwxNjI4MDkyMDc0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"startDate\" : \"2022-08-19T12:00:25.000Z\" ,\n        \"startQuizDate\" : \"2022-08-25T12:00:25.000Z\" ,\n        \"challengeId\" : \"aquitel_welcome2608\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesCheckCurrent",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesCheckCurrent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCode",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTE1ODA5NDAtYzZENk83aHlCWHdoLVY3MGl1UmdaaDBtN2xvLXNzb19mZmVfcHJvZHwxNjI4MDkyMDc0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"code\":\"COPERF\",\n        \"challengeId\" : \"4xsecurite-aquitelgroupea\"\n       \n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiChallengesCreateCode",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiChallengesCreateCode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "capture",
+			"item": [
+				{
+					"name": "generateImg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n        \"challengeId\": \"ceb-jib2022\",\n        \"teamId\" :  \"ecuriesdelogerie_33660_equitation\",\n        \"playerId\" : \"emmy_9anB37Pgfds2tR9XS-\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGenerateImagePlayerCard",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGenerateImagePlayerCard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "clubs",
+			"item": [
+				{
+					"name": "import",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"info\": \"CETTE METHODE N'EST PAS EN PROD PAR SECURITE renommer import.js => import.f.js pour l'utiliser\",\r\n        \"spreadSheetUrl\" : \"https://docs.google.com/spreadsheets/d/1RSM6wXeMwjIeA3_wdDrDZxcUqWo7_EMnbq2K6kV8sb8/edit#gid=1994082900\",\r\n        \"propertiesAndKeysToImport\" : {\r\n            \"department\":[\"id\",\"name\",\"code\"],\r\n            \"region\":[\"id\",\"name\",\"code\"],\r\n            \"schoolAcademy\": [\"id\", \"name\"],\r\n            \"schoolType\": [\"id\", \"name\"],\r\n            \"tribe\": [\"id\", \"name\"]\r\n        },\r\n        \"importDepartmentAndRegionFromZipCode\" : true,\r\n        \"createClubIfNotExist\" : true,\r\n        \"createPropertyValueIfNotExist\" : false,\r\n        \"fieldsToImport\": [\r\n            \"id\",\r\n            \"name\",\r\n            \"zipCode\",\r\n            \"city\"\r\n        ],\r\n        \"fieldsToBuildId\": [\"name\",\"zipCode\",\"schoolType\"]\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiClubsImport",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiClubsImport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "import UNSS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"info\": \"CETTE METHODE N'EST PAS EN PROD PAR SECURITE renommer import.js => import.f.js pour l'utiliser\",\r\n        \"spreadSheetUrl\" : \"https://docs.google.com/spreadsheets/d/1RSM6wXeMwjIeA3_wdDrDZxcUqWo7_EMnbq2K6kV8sb8/edit#gid=0\",\r\n        \"propertiesAndKeysToImport\" : {\r\n            \"department\":[\"id\",\"name\",\"code\"],\r\n            \"region\":[\"id\",\"name\",\"code\"],\r\n            \"schoolAcademy\": [\"id\", \"name\"],\r\n            \"schoolType\": [\"id\", \"name\"],\r\n            \"tribe\": [\"id\", \"name\"]\r\n        },\r\n        \"importDepartmentAndRegionFromZipCode\" : true,\r\n        \"createClubIfNotExist\" : true,\r\n        \"createPropertyValueIfNotExist\" : false,\r\n        \"fieldsToImport\": [\r\n            \"id\",\r\n            \"name\",\r\n            \"zipCode\",\r\n            \"city\"\r\n        ],\r\n        \"fieldsToBuildId\": [\"name\",\"zipCode\",\"schoolType\"]\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiClubsImport",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiClubsImport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fix",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n    \"info\": \"CETTE METHODE N'EST PAS EN PROD PAR SECURITE renommer import.js => import.f.js pour l'utiliser\",\r\n    \"challengeId\" : \"crosnatousausport\"\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiClubsFix",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiClubsFix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n    \"info\": \"CETTE METHODE N'EST PAS EN PROD PAR SECURITE renommer import.js => import.f.js pour l'utiliser\"\r\n\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiClubsDelete",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiClubsDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "importProperty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"info\": \"CETTE METHODE N'EST PAS EN PROD PAR SECURITE renommer import.js => import.f.js pour l'utiliser\",\r\n        \"clubPropertyId\": \"lrrBassin\",\r\n        \"clubPropertyName\": \"Bassin Ligue Rugby\",\r\n        \"spreadSheetUrl\" : \"https://docs.google.com/spreadsheets/d/15qRxdmqCCOsip46Mbg7ww5rfqpvG3tB5SI0qIIeCRqs/edit#gid=1129002265\",\r\n        \"fields\": [\r\n            \"id\",\r\n            \"name\"\r\n        ]   \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiClubsImportProperty",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiClubsImportProperty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ClubsToCsv Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"conditionKey\": \"region.id\",\r\n        \"conditionValue\": \"nouvelle_aquitaine\",\r\n        \"collection\":\"clubs\",\r\n        \"fields\": [\r\n            \"id\",\r\n            \"name\",\r\n            \"tribe.name\",\r\n            \"zipCode\",\r\n            \"department.name\"\r\n        ]   \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiTestsExportCollectionToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiTestsExportCollectionToCsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Whitelist",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"clubId\" : \"ffeteam_77_equitation\",\n        \"userListValue\" : \"theo@maracuja.ac\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiClubsWhitelist",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiClubsWhitelist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contest",
+			"item": [
+				{
+					"name": "create  COMPET p1 Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"maracujastaffchallenge\",\r\n        \"correctCount\":2,\r\n        \"questionSet\":{\r\n            \"id\":\"quiz1\",\r\n            \"name\":\"Echauffement Finale\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"contest\"\r\n        },\r\n        \"phase\":{\r\n            \"name\":\"inscriptions\",\r\n            \"id\":\"inscriptions\",\r\n            \"rankingFilters\":[],\r\n            \"questionSetCount\" : 2\r\n        },\r\n        \"topPlayers\" : {\"members\" : 1, \"referees\" : 1 },\r\n        \"hasQuit\" : false,\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"deviceId\": \"testA\",\r\n        \"questionCount\":5,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n            \"roles\":[]\r\n        },\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create  COMPET p2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"maracujastaffchallenge\",\r\n        \"correctCount\":1,\r\n        \"topPlayers\" : {\"members\" : 1, \"referees\" : 1 },\r\n        \"questionSet\":{\r\n            \"name\":\"Echauffement Finale\",\r\n            \"id\":\"quiz1\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"contest\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Grande Finale\",\r\n            \"id\":\"inscriptions\",\r\n            \"questionSetCount\" : 2\r\n        },\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"VB02Igs9MzTdYDyk46bBKOEWo4X2\",\r\n            \"roles\":[]\r\n        },\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"hasQuit\" : false,\r\n        \"deviceId\": \"testA\",\r\n        \"questionCount\":5,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GamesCreate CONTEST",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"ridetotokyo\",\r\n        \"correctCount\":2,\r\n        \"questionSet\":{\r\n            \"name\":\"Entrianement\",\r\n            \"id\":\"entrainement_1\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"contest\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Inscripitons\",\r\n            \"id\":\"inscriptions_n\",\r\n            \"trainingCount\" : 2\r\n        },\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"cgTwvz2BliRkFZpmqTqL59Use7w2\",\r\n            \"roles\":[]\r\n        },\r\n        \"topPlayers\" : {\"members\" : 1, \"referees\" : 1 },\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"hasQuit\" : false,\r\n        \"deviceId\": \"testA\",\r\n        \"questionCount\":5,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"centreequestredetrigny_51140_equitation\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create  COMPET p3 REFEREE",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"maracujastaffchallenge\",\r\n        \"correctCount\":1,\r\n        \"questionSet\":{\r\n            \"id\":\"quiz1\",\r\n            \"name\":\"Echauffement Finale\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"contest\"\r\n        },\r\n        \"phase\":{\r\n            \"name\":\"Grande Finale\",\r\n            \"id\":\"inscriptions\",\r\n            \"rankingFilters\":[],\r\n            \"questionSetCount\" : 2\r\n        },\r\n        \"topPlayers\" : {\"members\" : 1, \"referees\" : 1 },\r\n        \"hasQuit\" : false,\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"deviceId\": \"testA\",\r\n        \"questionCount\":5,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"dazdhfozeufjovefnzeo2893\"\r\n        },\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GamesCreate CONTEST_old",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"testffe\",\r\n        \"correctCount\":4,\r\n        \"questionSet\":{\r\n            \"name\":\"Epreuve\",\r\n            \"id\":\"epreuve\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"contest\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Inscripitons\",\r\n            \"id\":\"inscriptions\",\r\n            \"contestCount\" : 1\r\n        },\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"momo_stfSTzfEWhLqT_eJNf\",\r\n            \"roles\":[]\r\n        },\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"hasQuit\" : false,\r\n        \"deviceId\": \"testA\",\r\n        \"questionCount\":5,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"whynotfactory_75010_autres\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GamesCreate CONTEST",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"4xsecurite-aquitelgroupea\",\r\n        \"correctCount\":1,\r\n        \"questionSet\":{\r\n            \"name\":\"Help\",\r\n            \"id\":\"test-contest\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"contest\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Finale\",\r\n            \"id\":\"trainings_L\",\r\n            \"contestCount\" : 2\r\n        },\r\n        \"player\":{\r\n            \"username\":\"Damien\",\r\n            \"id\":\"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n            \"roles\":[]\r\n        },\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"hasQuit\" : false,\r\n        \"deviceId\": \"testA\",\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"topPlayers\" : {\"members\" : 1, \"referees\" : 1 },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesParticipate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesParticipate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "debriefing",
+			"item": [
+				{
+					"name": "DebriefingStart",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"4xsecurite-aquitelgroupea\",\n        \"playerId\": \"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\n        \"contestId\" : \"contestepreuve2_6\",\n        \"testMode\" : false\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiDebriefingStart",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiDebriefingStart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GamesCreate DEBRIEFING",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"4xsecurite-aquitelgroupea\",\r\n        \"correctCount\":1,\r\n        \"questionSet\":{\r\n            \"name\":\"Help\",\r\n            \"id\":\"test-contest\",\r\n            \"type\" : \"debriefing\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Finale\",\r\n            \"id\":\"trainings_L\",\r\n            \"contestCount\" : 2\r\n        },\r\n        \"player\":{\r\n            \"username\":\"Damien\",\r\n            \"id\":\"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n            \"roles\":[]\r\n        },\r\n        \"answerCount\" : 1,\r\n        \"questionCount\":1,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesParticipate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesParticipate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "EventsSubscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n      \"challenge\": {\r\n         \"id\" : \"maracujastaffchallenge\",\r\n         \"name\" : \"La semaine de l'innovation\",\r\n         \"emailTemplateID\" : \"2227729\"\r\n      },\r\n      \"event\": {\r\n        \"id\" : \"event-moninno-1617207743317-inscriptions\",\r\n        \"phaseId\":\"qualifications\",\r\n        \"name\": \"Atelier Ideation\",\r\n        \"eventStartDate\" : \"2020-03-03T14:15:19.959Z\",\r\n        \"eventEndDate\" : \"2020-03-03T15:15:19.959Z\"\r\n      },\r\n      \"team\" : {\r\n          \"id\" : \"maracujateam_33100_autre\",\r\n          \"name\" : \"Maracuja Team\"\r\n      },\r\n      \"player\" : {\r\n          \"id\" : \"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n          \"username\" : \"daminou\",\r\n          \"firstName\" : \"Damien\",\r\n          \"lastName\" : \"Romito\"\r\n      }\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiEventsSubscribe",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiEventsSubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV->EventSubscriptions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\" : \"edf_innovation_2021\",\r\n        \"collection\":\"eventsSubscriptions\",\r\n        \"fields\": [\r\n            \"event.periodString\",\r\n            \"player.firstName\",\r\n            \"player.lastName\",\r\n            \"player.username\",\r\n            \"team.name\",\r\n            \"team.id\",\r\n            \"createdAt\"\r\n        ]   \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiExportToCsv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "emails",
+			"item": [
+				{
+					"name": "fetchMemberContact Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"4xsecurite-aquitelgroupea\",\n\t\t\"memberId\" : \"pjkapwXJENgC8C0t7ULM1Xvplaq1\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiTestsTest",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiTestsTest"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "externalActivities",
+			"item": [
+				{
+					"name": "initializePlayerList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"testffe\",\r\n        \"externalActivityId\" : \"zozn6fQO\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiExternalActivitiesInitializePlayerList",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiExternalActivitiesInitializePlayerList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ImportScores",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"testffe\",\r\n        \"externalActivityId\" : \"Y3s0FpMo\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiExternalActivitiesImportScores",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiExternalActivitiesImportScores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "games",
+			"item": [
+				{
+					"name": "Games Clean",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"ridetotokyo\",\r\n        \"teamId\":\"maracujateam_33100_autre\"\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesClean",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesClean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"testffe\",\r\n        \"gameId\":\"damien_maracuja_jour2gyz_5lOczb1d\"\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesDelete",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesDelete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "questionSets",
+			"item": [
+				{
+					"name": "QuestionSetGetToPlay",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"ridetotokyo\",\n        \"deviceId\": \"dfede818-4256-434f-b20a-161d7383a630_web\",\n        \"playerId\": \"cgTwvz2BliRkFZpmqTqL59Use7w2\",\n        \"questionSetId\" : \"trainingbienvenueauxcavaliers_Y\",\n\t\t\"testMode\" : false\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiQuestionSetsStartGame",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiQuestionSetsStartGame"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Icebreaker",
+			"item": [
+				{
+					"name": "createQuestion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"truth1\" : \"Je suis beau\",\r\n        \"truth2\" : \"Je suis brun\",\r\n        \"lie\" : \"J'aime bien faire les travaux\",\r\n        \"playerId\" : \"damien_Q-Nd13IAxrz5Vse0AD\",\r\n        \"challengeId\" : \"aquitel_welcome2608\"\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiIcebreakerCreateQuestion",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiIcebreakerCreateQuestion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "complete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"4xsecurite-aquitelgroupea\",\r\n        \"correctCount\":1,\r\n        \"questionSet\":{\r\n            \"id\":\"icebreaker_maracujateam_33100_autre\",\r\n            \"name\":\"Decouvre ton équipe\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"icrebreaker\"\r\n        },\r\n        \"phase\":{\r\n            \"name\":\"inscriptions\",\r\n            \"id\":\"inscriptions\"\r\n        },\r\n        \"answerCount\" : 5,\r\n        \"questionCount\":1,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n            \"roles\":[]\r\n        },\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiIcebreakerComplete",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiIcebreakerComplete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IdeasBoxes",
+			"item": [
+				{
+					"name": "IdeasBoxesParticipate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n      \"challenge\": {\r\n         \"id\" : \"testffe\",\r\n         \"name\" : \"La semaine de l'innovation\",\r\n         \"emailTemplateID\" : \"2201180\"\r\n      },\r\n      \"idea\" : \"Faire un escalier qui va jusqu'à mars\",\r\n      \"ideasBox\": {\r\n        \"id\" : \"O-wLLXKU\",\r\n        \"phaseId\":\"inscriptions\",\r\n        \"name\": \"Une idée ?\"\r\n      },\r\n      \"team\" : {\r\n          \"id\" : \"maracujateam_33100_autre\",\r\n          \"name\" : \"Maracuja Team\"\r\n      },\r\n      \"player\" : {\r\n          \"id\" : \"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n          \"username\" : \"daminou\",\r\n          \"firstName\" : \"Damien\",\r\n          \"lastName\" : \"Romito\"\r\n      },\r\n      \"coachIds\" : [\"xrzY0yIBYiShk5QlHJX74KoX7ZK2\"]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiIdeasBoxesParticipate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiIdeasBoxesParticipate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CSV->Ideas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\" : \"edf_innovation_2021\",\r\n        \"collection\":\"ideas\",\r\n        \"fields\": [\r\n            \"idea\",\r\n            \"player.firstName\",\r\n            \"player.lastName\",\r\n            \"player.username\",\r\n            \"team.name\",\r\n            \"team.id\",\r\n            \"createdAt\"\r\n        ]   \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiExportToCsv"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lotteries",
+			"item": [
+				{
+					"name": "LotteriesSubscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n      \"challenge\": {\r\n         \"id\" : \"sopna\",\r\n         \"name\" : \"La semaine de l'innovation\"\r\n      },\r\n      \"event\": {\r\n        \"id\" : \"lottery-617207743317-inscriptions\",\r\n        \"phaseId\":\"inscriptions\",\r\n        \"name\": \"Lotterie Generali Ideation\"\r\n      },\r\n      \"team\" : {\r\n          \"id\" : \"maracujateam\",\r\n          \"name\" : \"Maracuja Team\"\r\n      },\r\n      \"player\" : {\r\n          \"id\" : \"McRZuJqqUMVO3YSPOTTe8y8KJn23\",\r\n          \"username\" : \"daminou\",\r\n          \"firstName\" : \"Damien\",\r\n          \"lastName\" : \"Romito\"\r\n      }\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiLotteriesSubscribe",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiLotteriesSubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apiLotteriesDrawWinners",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n      \"challengeId\": \"generali2021\",\r\n      \"winnerCount\" : 2,\r\n      \"subscriptionCount\" : 3000,\r\n      \"lotteryId\" : \"uhsjgcGi\"\r\n      \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiLotteriesDrawWinners",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiLotteriesDrawWinners"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "modules",
+			"item": [
+				{
+					"name": "duplicate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"organisationIdFrom\" : \"efap_h\",\n\t\t\"organisationIdTo\" : \"efap_h\",\n        \"moduleId\": \"intgration_efap_h\",\n        \"newName\": \"Intégration 1A\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiModulesDuplicate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiModulesDuplicate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+				{
+					"name": "SendScheduled",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {      \r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsSendScheduled",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsSendScheduled"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NotificationsSendToPlayer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\" : {\r\n    \"templateId\" : null,\r\n    \"playerId\" : \"Pn5yiyfnWhO8jTIUZH368SaSYzg1\",\r\n    \"challengeId\" : \"sopna\",\r\n    \"template\" : {\r\n        \"title\":\"Hello copain\",\r\n        \"message\":\"Comment vas-tu ?\"\r\n    },\r\n    \"variationId\" : \"phase-type-warmup\",\r\n    \"variables\" : {\"username\" : \"Damien\", \"coachWording\":\"capitaine\", \"coachUsername\": \"Tony\"}\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsSendToPlayer",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsSendToPlayer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "apiNotificationsSubscribeToChallengeTips",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\" : {\r\n    \"mailjetListId\" : 149475,\r\n    \"challengeId\" : \"ceb-jib2022\",\r\n    \"player\" : {\r\n        \"id\" : \"cgTwvz2BliRkFZpmqTqL59Use7w2\",\r\n        \"username\" : \"lélé\",\r\n        \"firstName\" : \"Léa\",\r\n        \"lastName\" : \"ROMITO\",\r\n        \"club\" : {\"name\" : \"Maracuja Team\"},\r\n        \"email\" : \"damien@maracuja.ac\",\r\n        \"platform\" : \"ios\",\r\n        \"roles\" : [\"COACH\"] \r\n    }\r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsSubscribeToChallengeTips",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsSubscribeToChallengeTips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NotificationsSendToPlayers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\" : {\r\n    \"templateId\" : \"add-idea-for-coach\",\r\n    \"playerIds\" : [\"roK4smDmx0gyqqxFKSVKtKHpUaO2\",\"T7BIfu7A69daMwBAYOJp4zQgk312\"],\r\n    \"challengeId\" : \"edfinnov\",\r\n    \"variables\" : {\"playerUsername\" : \"Damien\", \"info\":\"Theme du jour : Efficience\", \"idea\": \"Comment sensibliser les gens sur le concept d'éfficience ?\"}\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsSendToPlayers",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsSendToPlayers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NotificationsSendToAudience",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"data\" : {\r\n        \"audience\" : \"alreadyPlayed\",\r\n        \"challengeId\" : \"edf\",\r\n        \"questionSetId\" : \"semaine_de_l_innovation\",\r\n        \"teamIds\" : [\"leslectronovantesnc_edf\", \"maracujateam_33100_autre\"],\r\n        \"teamIds-\" : [\"leslectronovantesnc_edf\"],\r\n        \"playerIds-\" : [\"7kN7nU0T22VCIGJZFM6PDT1UIuw2\",\"PQgKRWHPAlhdXR5jkWddQTFqR7A2\", \"10jDoCtInpZalhmjoL9SL7RT4Fq2\"],\r\n        \"playerIds\" : null,\r\n        \"template\" : {\r\n            \"mailjetTemplateId\" : 1758498,\r\n            \"title\" : \"Pas joué ?!\",\r\n            \"redirect\" : \"/challenge/ranking\",\r\n            \"message\" : \"Tu n'as pas joué petit coquin !\"\r\n        }\r\n    }\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsSendToAudience",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsSendToAudience"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createForAnimation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"data\" : {\r\n        \"sendNow\" : true,\r\n        \"scheduledDates\": \"2022-02-01T14:16:19.959Z\",\r\n        \"audience\" : \"alreadyPlayed\",\r\n        \"challengeId\" : \"4xsecurite-aquitelgroupea\",\r\n        \"questionSetId\" : \"test-contest\",\r\n        \"questionSetPhaseId\" : \"trainings_L\",\r\n        \"questionSetType\" : \"contest\",\r\n        \"teamIds\" : [\"leslectronovantesnc_edf\", \"maracujateam_33100_autre\"],\r\n        \"teamIds-\" : [\"leslectronovantesnc_edf\"],\r\n        \"playerIds-\" : [\"7kN7nU0T22VCIGJZFM6PDT1UIuw2\",\"PQgKRWHPAlhdXR5jkWddQTFqR7A2\", \"10jDoCtInpZalhmjoL9SL7RT4Fq2\"],\r\n        \"template\" : {\r\n            \"mailjetTemplateId\" : 1758498,\r\n            \"title\" : \"Pas joué ?!\",\r\n            \"redirect\" : \"/challenge/ranking\",\r\n            \"message\" : \"Tu n'as pas joué petit coquin !\"\r\n        }\r\n    }\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsCreateForAnimation",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsCreateForAnimation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "phases",
+			"item": [
+				{
+					"name": "move",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"lrraquitaine-6nations\",\n\t\t\"phaseId\" : \"finale_X\",\n        \"newStartDay\" : \"2022-02-13\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPhasesMove",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPhasesMove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "move",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"crosnatousausport\",\n\t\t\"phaseId\" : \"finale_D\",\n        \"previousPhaseId\" : \"qualifications_2\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPhasesStart",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPhasesStart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "players",
+			"item": [
+				{
+					"name": "ChangeTeamPlayer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"4xsaquitel_sst2303\",\n\t\t\"playerId\" : \"cgTwvz2BliRkFZpmqTqL59Use7w2\",\n\t\t\"newTeamId\" : \"maracujateam_33100_autre\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersChangeTeam",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersChangeTeam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AvatarCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"challengeId\" :\"testffe\",\r\n        \"playerId\" : \"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n        \"imageUrl\" : \"https://firebasestorage.googleapis.com/v0/b/english-challenge-test.appspot.com/o/users%2FjpYEG7kFCzZQ6XsooOQKydIdYW03%2Favatar.jpg?alt=media&token=d64f5123-cc7a-49b2-a709-ce295d678539\",\r\n        \"removeBackground\" : true,\r\n        \"oldAvatarReplaced\" : false,\r\n        \"test\" : false\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersAvatarCreate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersAvatarCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create OLD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"challengeId\" :\"journedelolympisme\",\r\n        \"userId\": \"DJoziuvK74gOTv4KTfGHJkODeXy2\",\r\n        \"mailjetListId\": 138961,\r\n        \"clubId\" : \"modelarvertclub17_17000_aeromodelisme\",\r\n        \"isNew\" : true,\r\n        \"player\": {\r\n            \"username\" :\"Jarrrde\",\r\n            \"firstName\" : \"Daminou\",\r\n            \"email\" : \"jade@maracuja.ac\",\r\n            \"acceptNotification\" : false,\r\n            \"fcmToken\" : null,\r\n            \"platform\": \"web\",\r\n            \"roles\": []\r\n        }\r\n\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersCreate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscribe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"challengeId\" :\"mailjetchallenge\",\r\n        \"mailjetListId\": 138961,\r\n        \"email\" : \"jade@maracuja.ac\",\r\n        \"birthday\" : null,\r\n        \"phoneNumber\" : null,\r\n        \"password\" : \"azerty\",\r\n        \"userId\" : \"DJoziuvK74gOTv4KTfGHJkODeXy2zdz\",\r\n        \"username\" :\"Jarrrde\",\r\n        \"firstName\" : \"Daminou\",\r\n        \"roles\": [],\r\n        \"currentPhaseId\": \"onboarding\",\r\n        \"publicIp\" : \"192.168.1.1\",\r\n        \"deviceId\" : \"VIRTUAL\",\r\n        \"fcmToken\" : null,\r\n        \"platform\" : \"web\",\r\n        \"appVersion\": 60,\r\n        \"avatar\" : null,\r\n        \"optinRole\":\"supporter\",\r\n        \"club\" : {\r\n            \"id\" : \"equipe1edf2021_edf\",\r\n            \"name\" : \"La meilleure team\",\r\n            \"image\": \"ok\"\r\n        }\r\n\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersSubscribe",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersSubscribe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WhiteList",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"challengeId\" :\"efap_h_efapwelcome\",\r\n        \"email\" : \"adele.schmitt.b@gmail.com\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersWhitelistCheckV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersWhitelistCheckV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "licenceFFE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTE1ODA5NDAtYzZENk83aHlCWHdoLVY3MGl1UmdaaDBtN2xvLXNzb19mZmVfcHJvZHwxNjI4MDkyMDc0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ffecompet.ffe.com/secure-ws/licence-statut/5469556U",
+							"protocol": "https",
+							"host": [
+								"ffecompet",
+								"ffe",
+								"com"
+							],
+							"path": [
+								"secure-ws",
+								"licence-statut",
+								"5469556U"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tokenFFE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "service",
+									"value": "https://challenge.maracuja.ac/",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "ws-maracuja",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wAKi+6>24",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://ffecompet.ffe.com/secure-ws/token",
+							"protocol": "https",
+							"host": [
+								"ffecompet",
+								"ffe",
+								"com"
+							],
+							"path": [
+								"secure-ws",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LicenseCheck",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Maracuja App",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Brearer aHR0cHM6Ly9jaGFsbGVuZ2UubWFyYWN1amEuYWMvfFNULTY0NDY1MS1ONng4QmJaU0ZtTTFsTzRyRmFCdC1HaWswVTAtc3NvX2ZmZV9wcm9kfDE2MjMwNTQ4MjA=",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n\t\t\"licenseNumber\" : \"5469556U\",\r\n\t\t\"challengeId\" : \"ridetotokyo\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersLicenseCheck",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersLicenseCheck"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WakeUp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"data\" : {\r\n    \"challengeId\" : \"4xsecurite-aquitelgroupea\",\r\n    \"questionSetId\" : \"test-contest\",\r\n    \"sender\" : {\"id\": \"jpYEG7kFCzZQ6XsooOQKydIdYW03\", \"username\" : \"Damien\"},\r\n    \"playerId\" : \"tom_qpFH7GMyLqYvlR5hLs\",\r\n    \"phase\" : {\r\n        \"id\" : \"trainings_L\"\r\n    },\r\n    \"questionSetType\" : \"training\",\r\n    \"coachWording\" : \"capitaine\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersWakeUp",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersWakeUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Motivate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"challenge\": {\r\n            \"id\" : \"maracujastaffchallenge\",\r\n            \"name\" : \"La semaine de l'innovation\",\r\n            \"emailTemplateID\" : \"2201180\"\r\n        },\r\n        \"sender\": {\"id\": \"EP0BZXK2npMzycim0SI2aRg4hJA3\", \"username\": \"JBer\"},\r\n        \"coachWording\": \"capitaine\",\r\n        \"team\": {\"id\": \"ffeteam_77_equitation\", \"name\": \"FFE Team\"},\r\n        \"message\": \"Salut la team\"\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiPlayersMotivate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiPlayersMotivate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rankings",
+			"item": [
+				{
+					"name": "CSV-> Rankings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\" : \"crosnatousausport\",\r\n        \"collection\" : \"rankings\",\r\n        \"linePerArrayObject\" : \"teams\",\r\n        \"objectFields\" : [\"name\", \"id\", \"playerCount\", \"refereeCount\",\"coachCount\",\"scores._stats.score\",\"scores._stats.progression\", \"scores._stats.count\"],\r\n        \"fields\": [\r\n            \"phase.name\",\r\n            \"department.name\",\r\n            \"region.name\",\r\n            \"editedAt\",\r\n            \"createdAt\"\r\n        ]   \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiExportToCsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RankingsCreate ",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"innovation_2021\",\n\t\t\"phaseId\" : \"semaine_de_l_innovation\"\n        \n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiRankingsCreate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiRankingsCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RankingsCalculate",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiRankingsCalculate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiRankingsCalculate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Referral",
+			"item": [
+				{
+					"name": "getRefererCode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"lrraquitaine-6nations\",\r\n        \"dynamicLinkHost\": \"maracuja.page.link\",\r\n        \"player\": {\r\n            \"id\":\"cgTwvz2BliRkFZpmqTqL59Use7w2\",\r\n            \"username\" : \"daminou\",\r\n            \"firstName\" : \"Damien\"\r\n        },\r\n        \"team\": {\r\n            \"id\" : \"maracujateam_33100_autre\",\r\n            \"name\" : \"MaracujaTeam\"\r\n        },\r\n        \"socialMetaTags\" : {\r\n            \"title\": \"C'est cool\",\r\n            \"description\": \"C'est même tres cool\",\r\n            \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/maracuja-english-challenge.appspot.com/o/challenges%2Fgenerali%2FsocialClubImage%2FsocialClubImage.png?alt=media&token=9f81b772-d898-4fa9-a8a4-78e52c5c6eca\"\r\n            }\r\n        }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiReferralGetCode",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiReferralGetCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "codeCheck",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"challengeId\": \"testffe\",\r\n       \"code\":\"AAAA\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiReferralCodeCheck",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiReferralCodeCheck"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "updateCaptain",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"challengeId\": \"efap_h_efap1a\",\r\n        \"teamId\": \"lesfantastiques_aquitel_YzCcV6yU\",\r\n        \"playerId\": \"nadine_yuawW_6AMRme25mnis\",\r\n        \"removeRole\" : false\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiTeamsUpdateCaptain",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiTeamsUpdateCaptain"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateClubs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n        \"clubsCount\" : 2,\r\n        \"namingType\" : \"random\",\r\n        \"challengeId\" : \"4xsecurite_newcode\",\r\n        \"organisationId\" : \"4xsecurite\",\r\n        \"haveToCreateMaracujaTeam\" : true\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiTeamsGenerateClubs",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiTeamsGenerateClubs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buildScore",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"crditagricoleformation_f_international\",\n        \"teamId\" : \"maracujateam_33100_autre\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiTeamsBuildScore",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiTeamsBuildScore"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tests",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n      }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiTestsTest",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiTestsTest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"data\" : {\r\n       \r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiNotificationsFix",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiNotificationsFix"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "training",
+			"item": [
+				{
+					"name": "GamesCreate TRAINING",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"4xsecurite-aquitelgroupea\",\r\n        \"correctCount\":5,\r\n        \"questionCount\":5,\r\n        \"questionSet\":{\r\n            \"name\":\"Entrianement\",\r\n            \"id\":\"entrainement_2\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"training\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Inscripitons\",\r\n            \"id\":\"4xchallenge_z\",\r\n            \"trainingCount\" : 2\r\n        },\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n            \"roles\":[]\r\n        },\r\n        \"topPlayers\" : {\"members\" : 1, \"referees\" : 1 },\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"hasQuit\" : false,\r\n        \"deviceId\": \"testA\",\r\n\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GamesCreate WARMUP p2",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"data\":{\r\n        \"challengeId\":\"maracujastaffchallenge\",\r\n        \"correctCount\":0,\r\n        \"questionSet\":{\r\n            \"name\":\"Entrianement\",\r\n            \"id\":\"entrainement_2\",\r\n            \"startDate\" : \"2021-04-01T14:16:19.959Z\",\r\n            \"endDate\" : \"2021-04-12T14:16:19.959Z\",\r\n            \"type\" : \"training\"\r\n        },\r\n        \"phase\":{\r\n            \"rankingFilters\":[],\r\n            \"name\":\"Inscripitons\",\r\n            \"id\":\"inscriptions\",\r\n            \"questionSetCount\" : 3\r\n        },\r\n        \"player\":{\r\n            \"firstName\":\"Marc\",\r\n            \"username\":\"Marc\",\r\n            \"id\":\"jpYEG7kFCzZQ6XsooOQKydIdYW03\",\r\n            \"roles\":[]\r\n        },\r\n        \"answerCount\" : 2,\r\n        \"endOfTime\":false,\r\n        \"hasQuit\" : false,\r\n        \"deviceId\": \"testA\",\r\n        \"questionCount\":5,\r\n        \"duration\":3582,\r\n        \"completedAt\" : \"2021-04-02T14:16:19.959Z\",\r\n        \"team\":{\r\n            \"name\":\"Maracuja Team\",\r\n            \"id\":\"maracujateam_33100_autre\"\r\n        },\r\n        \"answers\":[\r\n            {\r\n               \"id\":\"I-A01\",\r\n               \"text\":\"Jeux olympiques de 1904\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":0\r\n            },\r\n            {\r\n               \"id\":\"I-A02\",\r\n               \"text\":\"Ville de Saint Louis\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"\",\r\n               \"solutions\":null,\r\n               \"duration\":799\r\n            },\r\n            {\r\n               \"id\":\"IC-A01\",\r\n               \"text\":\"Dans quelle ville ont eu lieu les Jeux Olympiques de 1904 ?\",\r\n               \"isCorrect\":null,\r\n               \"answer\":\"Paris\",\r\n               \"solutions\":\"Saint-Louis\",\r\n               \"duration\":1523\r\n            },\r\n            {\r\n               \"id\":\"IC-A02\",\r\n               \"text\":\"La ville de Saint-Louis fut fondée par des colons ...\",\r\n               \"isCorrect\":true,\r\n               \"answer\":\"français\",\r\n               \"solutions\":\"français\",\r\n               \"duration\":1260\r\n            }\r\n         ]\r\n\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiGamesCreateV2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiGamesCreateV2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "UsersToCSV Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n        \"collection\":\"users\",\r\n        \"fields\": [\r\n            \"username\",\r\n            \"firstName\",\r\n            \"email\",\r\n            \"challengeIds\",\r\n            \"club.name\",\r\n            \"club.id\",\r\n            \"platform\",\r\n            \"birthday\",\r\n            \"roles\",\r\n            \"createdAt\",\r\n            \"editedAt\"\r\n        ]   \r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiExportToCsv",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiExportToCsv"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AnonymizeData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\t\"data\" : {\r\n    }\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiUsersAnonymizeData",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiUsersAnonymizeData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addRole AUTHOR",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"userId\" : \"25cTdlDc5kRz3kqiOljFU8EkGj13\",\n\t\t\"challengeId\" : \"ffecontenu\",\n\t\t\"organisationId\" : \"maracuja\",\n\t\t\"role\" : \"AUTHOR\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiUsersAddRole",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiUsersAddRole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"email\" : \"pierre@maracuja.Ac\",\n\t\t\"password\" : \"azerty\",\n        \"username\" : \"Pierre\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiUsersCreate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiUsersCreate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createAdmin",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"email\" : \"marc@maracuja.ac\",\n        \"firstName\" : \"Marco\",\n\t\t\"organisationId\" : \"4xsecurite\",\n        \"existingUserId\" : false,\n        \"role\": \"AUTHOR\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiUsersCreateAdmin",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiUsersCreateAdmin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recruitment",
+			"item": [
+				{
+					"name": "fetchMemberContact",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"4xsecurite-aquitelgroupea\",\n\t\t\"memberId\" : \"pjkapwXJENgC8C0t7ULM1Xvplaq1\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiMembersGetContact",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiMembersGetContact"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "whitelist",
+			"item": [
+				{
+					"name": "whitelistSendSubscriptionSms",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"aquitel_welcome1305\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiWhitelistSendSubscriptionSms",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiWhitelistSendSubscriptionSms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "whitelistSendSubscriptionEmail",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"data\" : {\n\t\t\"challengeId\" : \"aquitel_welcome1305\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/apiWhitelistSendSubscriptionEmail",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"apiWhitelistSendSubscriptionEmail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

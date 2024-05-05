@@ -1,0 +1,20 @@
+const { errorResponse, successResponse } = require("../../utils/response")
+const { objectSubset } = require("../../utils")
+const { debug } = require("firebase-functions/lib/logger")
+const { GoogleSpreadsheet } = require("google-spreadsheet")
+const WhitelistMember = require("../../models/WhitelistMember")
+const User = require("../../models/User")
+const { Challenge, Team, Club } = require("../../models")
+const errorCodes = require("../../constants/errorCodes")
+const { authOnCall } = require("../../utils/functions")
+const { USER_ROLES } = require("../../constants")
+const functions = require("firebase-functions").region("europe-west1")
+const admin = require("firebase-admin")
+
+exports = module.exports = authOnCall({ role: USER_ROLES.SUPER_ADMIN }, async (data, context) => {
+  const { challengeId } = data
+  console.log("challengeId:", challengeId)
+  const db = admin.firestore()
+  const ref = db.collection("challenges").doc(challengeId)
+  await db.recursiveDelete(ref)
+})

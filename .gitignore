@@ -1,0 +1,22 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# misc
+.DS_Store
+
+# dependencies
+node_modules/
+
+#APP
+# production
+build/
+.firebase/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*.eslintcache
+
+
+
+

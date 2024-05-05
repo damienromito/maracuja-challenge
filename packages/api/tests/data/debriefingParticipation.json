@@ -1,0 +1,39 @@
+{
+        "challengeId":"4xsecurite-aquitelgroupea",
+        "correctCount":1,
+        "questionSet":{
+            "name":"Help",
+            "id":"test-contest",
+            "type" : "debriefing"
+        },
+        "phase":{
+            "rankingFilters":[],
+            "name":"Finale",
+            "id":"trainings_L",
+            "contestCount" : 2
+        },
+        "player":{
+            "username":"Damien",
+            "id":"jpYEG7kFCzZQ6XsooOQKydIdYW03",
+            "roles":[]
+        },
+        "answerCount" : 1,
+        "questionCount":1,
+        "duration":3582,
+        "completedAt" : "2021-04-02T14:16:19.959Z",
+        "team":{
+            "name":"Maracuja Team",
+            "id":"maracujateam_33100_autre"
+        },
+        "answers":[
+            {
+               "id":"I-A01",
+               "text":"Jeux olympiques de 1904",
+               "isCorrect":true,
+               "answer":"",
+               "solutions":null,
+               "duration":5
+            }
+         ]
+
+    }

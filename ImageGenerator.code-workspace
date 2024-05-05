@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "./packages/app"
+		},
+		{
+			"path": "./packages/image-generator"
+		},
+		{
+			"path": "./packages/shared"
+		}
+	],
+	"settings":
+	{
+    "javascript.validate.enable": false,
+    "standard.autoFixOnSave": true
+	}
+}

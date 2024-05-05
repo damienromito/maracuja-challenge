@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "staging": "english-challenge-test",
+    "production": "maracuja-english-challenge",
+    "default": "english-challenge-test"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "storage": {
+    "backup": "maracuja-challenge-backup",
+    "bucket": "maracuja-english-challenge.appspot.com"
+  },
+  "algolia": {
+    "app_id": "AD5OAPQ1NF",
+    "clubs_key": "clubs",
+    "search_key": "clubs",
+    "api_key": "dc7553a6abf307161a3cdc54006ed60e"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "595442474908",
+    "firebase_url": "https://maracuja-english-challenge.firebaseio.com",
+    "project_id": "maracuja-english-challenge",
+    "storage_bucket": "maracuja-english-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595442474908:android:3fa16c3ab347e2fb067259",
+        "android_client_info": {
+          "package_name": "ac.maracuja.challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595442474908-pgvtpb013r0hcn2sib83mckncbodjl20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIk_BDVudfWFNojj2Bj1WyOz8QkgUWMSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595442474908-algskt9p5oe691liv19fmt1nbk1ok7oi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "595442474908-7p9ej7iq3hbs2j56najv7ovv8q37gem2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ac.maracuja.crosna",
+                "app_store_id": "1568520883"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595442474908:android:8b9c7b28a9140844067259",
+        "android_client_info": {
+          "package_name": "ac.maracuja.crosna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595442474908-pgvtpb013r0hcn2sib83mckncbodjl20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIk_BDVudfWFNojj2Bj1WyOz8QkgUWMSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595442474908-algskt9p5oe691liv19fmt1nbk1ok7oi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "595442474908-7p9ej7iq3hbs2j56najv7ovv8q37gem2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ac.maracuja.crosna",
+                "app_store_id": "1568520883"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

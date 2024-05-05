@@ -1,0 +1,56 @@
+name: Build and Deploy production
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # build:
+  #   name: Build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     # - name: Checkout Repo
+  #     #   uses: actions/checkout@master
+  #     # - name: Install Dependencies
+  #     #   run: npm install
+  #     # - name: Archive Production Artifact
+  #     #   uses: actions/upload-artifact@master
+  #     #   with:
+  #     #     name: dist
+  #     #     path: .
+  deploy:
+    name: Deploy
+    # needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      # - name: Download Artifact
+      #   uses: actions/download-artifact@master
+      #   with:
+      #     name: dist
+      #     path: .
+      - name: Install Dependencies
+        run: npm install
+
+      # - name: set env configs
+      #   uses: w9jds/firebase-action@master
+      #   with:
+      #     # args: functions:config:get
+      #     args: functions:config:set storage.bucket="${{ secrets.DEV_STORAGE_BUCKET }}"
+
+      #   env:
+      #     GCP_SA_KEY: ${{ secrets.DEV_FIREBASE_SERVICE_ACCOUNT }}
+      #     PROJECT_ID: english-challenge-test
+
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only functions
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          # GCP_SA_KEY: ${{ secrets.DEV_FIREBASE_SERVICE_ACCOUNT }}
+          PROJECT_ID: maracuja-english-challenge
+
+
